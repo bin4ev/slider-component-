@@ -1,0 +1,17 @@
+<div class="wraper" >
+  <div #div class="track" [style.width.px]="width" (click)="increaseWidth($event)">
+    <div #div class="range"
+     [style.width.px]="newWidth" ></div>
+    <div  id="thumb1" #thumb class="thumb" [ccTooltip]="val" [pressedBtn] = "pressedBtn"
+      (mousedown) = "onMouseDown($event)"
+      [style.left.px]="newWidth-10">
+    </div>
+
+    <div #div id="track" class="track"
+    (click)="decreaseWidth($event)"
+    [style.width.px]="newWidth2" ></div>
+    <div  id="thumb2" #thumb class="thumb" [style.left.px]="newWidth2-10" [ccTooltip]="val" [pressedBtn] = "pressedBtn"
+    (mousedown)= "onMouseDown($event)">
+  </div>
+  </div>
+</div>
